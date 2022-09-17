@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_diagonal - prints backward slacsha as a diagonal
+ * print_diagonal - prints backward slash as a diagonal
  *
  * @n: the number of times the backward slash is printed
  * Return: void
