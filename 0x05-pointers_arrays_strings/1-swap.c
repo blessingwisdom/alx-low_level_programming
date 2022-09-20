@@ -2,8 +2,8 @@
 
 /**
  * swap_int - Function that swaps 2 numbers
- * @a - number 1
- * @b - number 2
+ * @a - number to be evaluated
+ * @b - number to be evaluated
  * Return: void
  */
 void swap_int(int *a, int *b)
