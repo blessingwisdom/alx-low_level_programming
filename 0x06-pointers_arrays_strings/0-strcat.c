@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcat - concatenates two strings
+ * *_strcat - concatenates two strings
  * @dest: character to be checked
  * @src: character to be checked
  * Return: dest
