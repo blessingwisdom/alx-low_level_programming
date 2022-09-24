@@ -1,40 +1,24 @@
 #include "main.h"
+#include <string.h>
 
 /**
- * *cap_string - capitalizes allwords of a string
- * @str: string to be capitaalized
- * Return: pointer to the string
+ * *cap_string - capitalizes all words of a string.
+ * @s: string.
+ * Return: string.
  */
-char *cap_string(char *)
+char *cap_string(char *s)
 {
-	int i, j, counter;
-
-	i = counter = 0;
-
-	while (str[i] != '\0')
-		i++;
-
-	for (j = 0; j < 1; j++)
+	char spc[] = {32, 9, '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+	int a = 0;
+	unsigned long int i;
+	
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		if (counter == 0)
+		for (i = 0; i < strlen(spc); i++)
 		{
-			if (str[j] >= 'a' && str[j] <= 'z')
-				str[j] = str[j] - 32;
-			else
-				counter++;
+			if ((a == 0 || s[a - 1] == spc[i]) && (s[a] >= 97 && s[a] <= 122))
+				s[a] = s[a] - 32;
 		}
-		if (str[j] == '!' || str[j] == '"' || str[j] == '(' || str[j] == ')')
-			counter = 0;
-		else if (str[j] == ',' || str[j] == '.' || str[j] == '{' || str[j] == '}')
-			counter =0;
-		else if (str[j] == ';' || str[j] == '?' || str[j] == '\n')
-			counter = 0;
-		else if (str[j] == '\t')
-			counter = 0;
-		else if (str[j] == ' ')
-			counter = 0;
-		else
-			counter++;
 	}
-	return (str);
+	return (s);
 }
