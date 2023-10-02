@@ -1,1 +1,2 @@
-libmy.a is a static library. \n The file main.h is a header file.
+`libmy.a` is a static library. 
+The file `main.h` is a header file.
